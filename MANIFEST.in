@@ -1,11 +1,3 @@
-include Makefile CHANGES LICENSE AUTHORS
-
-graft artwork
-graft tests
-graft examples
-graft docs
-
-global-exclude *.py[co]
-
-prune docs/_build
-prune docs/_themes
+graft flaskr/templates
+graft flaskr/static
+include flaskr/schema.sql

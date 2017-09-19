@@ -1,49 +1,40 @@
+                         / Flaskr /
+
+                 a minimal blog application
 
 
-                          // Flask //
+    ~ What is Flaskr?
 
-              web development, one drop at a time
+      A sqlite powered thumble blog application
 
+    ~ How do I use it?
 
-    ~ What is Flask?
+      1. edit the configuration in the factory.py file or
+         export a FLASKR_SETTINGS environment variable
+         pointing to a configuration file or pass in a
+         dictionary with config values using the create_app
+         function.
 
-      Flask is a microframework for Python based on Werkzeug
-      and Jinja2.  It's intended for getting started very quickly
-      and was developed with best intentions in mind.
+      2. install the app from the root of the project directory
 
-    ~ Is it ready?
+         pip install --editable .
 
-      It's still not 1.0 but it's shaping up nicely and is
-      already widely used.  Consider the API to slightly
-      improve over time but we don't plan on breaking it.
+      3. instruct flask to use the right application
 
-    ~ What do I need?
+         export FLASK_APP=flaskr.factory:create_app()
 
-      All dependencies are installed by using `pip install Flask`.
-      We encourage you to use a virtualenv. Check the docs for
-      complete installation and usage instructions.
+      4. initialize the database with this command:
 
-    ~ Where are the docs?
+         flask initdb
 
-      Go to http://flask.pocoo.org/docs/ for a prebuilt version
-      of the current documentation.  Otherwise build them yourself
-      from the sphinx sources in the docs folder.
+      5. now you can run flaskr:
 
-    ~ Where are the tests?
+         flask run
 
-      Good that you're asking.  The tests are in the
-      tests/ folder.  To run the tests use the
-      `pytest` testing tool:
+         the application will greet you on
+         http://localhost:5000/
 
-        $ pytest
+    ~ Is it tested?
 
-      Details on contributing can be found in CONTRIBUTING.rst
-
-    ~ Where can I get help?
-
-      Either use the #pocoo IRC channel on irc.freenode.net or
-      ask on the mailinglist: http://flask.pocoo.org/mailinglist/
-
-      See http://flask.pocoo.org/community/ for more resources.
-
-
+      You betcha.  Run `python setup.py test` to see
+      the tests pass.
